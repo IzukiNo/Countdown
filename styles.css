@@ -46,3 +46,10 @@ p{
 #today{
     font-size: 30px;
 }
+
+@media (max-width: 768px) {
+    #countdown {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
