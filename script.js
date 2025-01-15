@@ -1,7 +1,8 @@
 function updateCountdown() {
-  const newYear = new Date("January 1, 2025 00:00:00").getTime();
-  const now = new Date().getTime();
-  const timeLeft = newYear - now;
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const newYear = new Date(`January 1, ${currentYear + 1} 00:00:00`).getTime();
+  const timeLeft = newYear - now.getTime();
 
   const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
